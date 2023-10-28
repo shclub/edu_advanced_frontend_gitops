@@ -19,6 +19,6 @@ spec:
         image: ghcr.io/shclub/edu12-3
         env:
           - name: BACKEND_API_URL
-            value: "http://backend" 
+            value: "http://backend-springboot" 
         ports:
         - containerPort: 80
