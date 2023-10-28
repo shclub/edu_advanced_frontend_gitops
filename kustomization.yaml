@@ -6,4 +6,4 @@ resources:
 - route.yaml
 images:
 - name: ghcr.io/shclub/edu12-3
-  newTag: "v2"
+  newTag: "v3"
