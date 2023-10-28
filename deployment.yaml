@@ -1,26 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: frontend-react
   labels:
-    app: frontend
+    app: frontend-reat
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: frontend-react
   template:
     metadata:
       labels:
-        app: frontend
+        app: frontend-react
     spec:
       containers:
-      - name: frontend
-        image: ghcr.io/shclub/edu12-frontend
-        #image: ghcr.io/shclub/edu12-3:v10
-        #image: shclub/edu12-3:v11
+      - name: frontend-react
+        image: ghcr.io/shclub/edu12-3
         env:
         - name: BACKEND_API_URL
-          value: "http://backend" 
+          value: "http://backend-springboot" 
         ports:
         - containerPort: 80
