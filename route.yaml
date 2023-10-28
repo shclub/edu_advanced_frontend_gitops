@@ -1,16 +1,14 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: frontend
+  name: frontend-react
 spec:
-  host: frontend-edu30.apps.211-34-231-82.nip.io
   port:
-    targetPort: 80
-#  tls:
-#    insecureEdgeTerminationPolicy: Redirect
-#    termination: passthrough
+    targetPort: http
+  tls:
+    termination: edge
   to:
     kind: Service
-    name: frontend
-    weight: 100    
-  wildcardPolicy: None  
+    name: frontend-react
+    weight: 100
+  wildcardPolicy: None
