@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
+  name: frontend-react
 spec:
   selector:
-    app: frontend
+    app: frontend-react
   ports:
     - protocol: TCP
       port: 80
+      name: http
       targetPort: 80
   type: ClusterIP   
