@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend-react
+        imagePullPolicy: Always
         image: ghcr.io/shclub/edu12-3
         env:
           - name: BACKEND_API_URL
