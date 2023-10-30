@@ -1,2 +1,2 @@
-# edu12-frontend-gitops
+# edu12-3 frontend-gitops
 frontend ( react )
