@@ -8,8 +8,8 @@ spec:
   port:
     targetPort: http
   tls:
-    - hosts:
-      - frontend-react-edu25.apps.okd4.ktdemo.duckdns.org
+  - hosts:
+    - frontend-react-edu25.apps.okd4.ktdemo.duckdns.org
     secretName: cert-manager-webhook-duckdns-staging
     #termination: edge
   to:
