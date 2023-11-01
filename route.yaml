@@ -2,11 +2,16 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: frontend-react
+  annotations:
+    cert-manager.io/cluster-issuer: cert-manager-webhook-duckdns-staging
 spec:
   port:
     targetPort: http
   tls:
-    termination: edge
+    - hosts:
+      - frontend-react-edu25.apps.okd4.ktdemo.duckdns.org
+    secretName: cert-manager-webhook-duckdns-staging
+    #termination: edge
   to:
     kind: Service
     name: frontend-react
